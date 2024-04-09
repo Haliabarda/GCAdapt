@@ -1,0 +1,427 @@
+body {
+    background-color: #B7B4B4;
+    margin: 0;
+    padding: 0;
+}
+
+.FirstSection {
+    background-image: url('../img/bgImg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Висота секції рівна 100% висоти вікна браузера (viewport height) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 70px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+}
+
+.navbar img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff; 
+    margin-right: 30px; 
+    font-size: 25px;
+    font-family: League Gothic;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #d4d4d4ce;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 9px 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Main a {
+    display: block;
+    font-size: 96px;
+    font-family: League Gothic;
+    animation: fadeIn 3s ease-in-out; /* Apply the fadeIn animation */
+}
+
+/* Additional styling */
+.Main {
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.Main p {
+    font-size: 25px;
+    font-family: 'League Gothic', sans-serif;
+    animation: slideInFromLeft 2s ease-out; 
+    animation-fill-mode: forwards; 
+}
+
+.Main button {
+    background: linear-gradient(to right, rgba(88, 129, 58, 0.8), rgba(28, 48, 13, 0.8)); 
+    border-radius: 60px;
+    padding: 5px 80px;
+    color:#ffffff; 
+    font-family: 'League Gothic', sans-serif; 
+    font-size: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border: none; 
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.Main button:hover {
+    background: linear-gradient(to right, rgba(28, 48, 13, 1), rgba(88, 129, 58, 1)); /* Adjust the gradient on hover for a brighter effect */
+    transform: scale(1.1); /* Increase scale on hover */
+}
+
+.categorysec {
+    display: flex;
+    justify-content: space-between; /* Add this line to separate the text and image containers */
+}
+
+
+
+.firstContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 190px;  
+}
+
+@keyframes shadowGlow {
+    0% {
+        text-shadow: 0 0 2cm rgba(217, 255, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(133, 135, 9, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.category-title-animation {
+    animation: shadowGlow 3s infinite alternate; 
+}
+
+.category-title-animation:hover {
+    animation-play-state: paused;
+}
+
+.firstContainer p {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 60px;
+    text-shadow:0 4px 6px #696969;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.firstContainer div {
+    animation: slideInFromLeft 1.5s ease-out; 
+    animation-fill-mode: forwards; 
+}
+
+.firstContainer div:nth-child(1) {
+    animation-delay: 3s; 
+}
+
+.firstContainer div:nth-child(2) {
+    animation-delay: 2s; 
+}
+
+.firstContainer div:nth-child(3) {
+    animation-delay: 1.5s; 
+}
+
+.firstContainer img {
+    padding: 10px;
+    width: 350px;
+    height: 235px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.firstContainer img:hover {
+    transform: scale(1.1); /* Increase scale on hover */
+}
+
+.imgContainer {
+    width: 790px;
+    height: 950px;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #B7B4B4;
+}
+
+.Contact img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.Contact h3 {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.098);
+    margin-bottom: 60px;
+}
+
+.Contact address {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; /* зміна на center */
+    padding: 50px;
+}
+
+.Contact .addressa,
+.Contact .contacty {
+
+    margin: 0 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.Contact address div img {
+    width: 32px;
+    height: 32px;
+    margin: 0px 20px 0px 0px;
+}
+
+.Contact address div span {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #a3a2a2;  
+    padding: 40px 0;
+}
+
+footer h2 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+footer span {
+    color: #1F370D;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 245px;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
+footer a {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: #000000;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 995px) {
+    .header {
+        padding: 15px 20px; /* Reduce padding for the header */
+    }
+
+    .logo img {
+        width: 70px; /* Adjust logo size */
+        height: 70px;
+    }
+
+    .navbar a {
+        font-size: 20px; /* Decrease font size for navigation links */
+    }
+
+    .Main a {
+        font-size: 60px; /* Decrease font size for the main title */
+    }
+
+    .Main p {
+        font-size: 20px; /* Decrease font size for the main text */
+    }
+
+    .Main button {
+        padding: 5px 50px; /* Adjust button padding */
+        font-size: 20px; /* Decrease font size for the button */
+    }
+
+    .categorysec {
+        flex-direction: column-reverse; /* Reverse the order of flex items on smaller screens */
+    }
+
+    .firstContainer {
+        margin-left: 0;
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        text-align: center;
+    }
+
+    .firstContainer p {
+        font-size: 40px; /* Decrease font size for the category title */
+    }
+
+    .firstContainer img {
+        width: 250px; /* Adjust image size */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
+
+    .imgContainer {
+        width: 100%; /* Ensure image container spans the full width */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
+
+    .imgContainer img {
+        width: 100%; /* Ensure image spans the full width */
+        height: auto; /* Ensure aspect ratio is maintained */
+    }
+    .Contact img {
+        width: 100%; /* Ensure contact image spans the full width */
+    }
+
+    .Contact h3 {
+        font-size: 20px; /* Decrease font size for contact header */
+    }
+
+    .Contact address {
+        flex-direction: column; 
+    }
+
+    .addressa, .contacty {
+        width: 10%; 
+        margin-bottom: 20px; 
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer h2 {
+        margin: 0;
+        font-size: small;
+    }
+
+    footer span {
+        margin: 0; 
+        font-size: small;
+    }
+
+    footer img {
+        justify-content: center;
+        align-items: center;
+        width: 20px; 
+        height: 20px;
+        margin: 0 5px; 
+    }
+
+    footer a {
+        display: block; 
+        margin: 5px 0; 
+        font-size: larger;
+    }
+}
